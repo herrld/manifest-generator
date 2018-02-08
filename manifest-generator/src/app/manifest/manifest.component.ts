@@ -1,0 +1,29 @@
+import { Component, OnInit } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
+
+import {Manifest} from '../models/manifest';
+import {Database} from '../models/database';
+@Component({
+  selector: 'app-manifest',
+  templateUrl: './manifest.component.html',
+  styleUrls: ['./manifest.component.css']
+})
+export class ManifestComponent implements OnInit {
+
+  dataModel:Manifest = new Manifest();
+  generated:boolean = false;
+  file;
+  constructor(private sanitizer: DomSanitizer) { }
+
+  ngOnInit() {
+    this.dataModel.databases.push(new Database());
+  }
+
+  gen(){
+    let asFile = JSON.stringify(this.dataModel);
+    this.file= this.sanitizer.bypassSecurityTrustUrl("data:text/plain;charset=utf-8,"+encodeURIComponent(JSON.stringify(this.dataModel)));
+    this.generated = true;
+    
+  }
+
+}

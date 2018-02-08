@@ -1,0 +1,9 @@
+<div>
+  <p>Databases</p>
+  <div class="row" *ngFor="let db of dataModel.databases">
+    <app-database [dataModel]="db"></app-database>
+    
+  </div>
+  <input type="button" (click)="gen()" value="create file">
+  <a *ngIf="generated" download="manifest.txt" [href]="file">dl</a>
+</div>
