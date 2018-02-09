@@ -3,7 +3,20 @@
 </p>
 <div>
   <label>name:
-  <input [(ngModel)]="dataModel.name">
+  <input [(ngModel)]="dataModel.database">
 </label>
 </div>
-<div><label>server</label><input [(ngModel)]="dataModel.server"></div>
+<div>
+  <label>server:
+    <input [(ngModel)]="dataModel.server">
+  </label>
+</div>
+<div>
+  <h2>tables</h2>
+</div>
+<div class="row" *ngFor="let tbl of dataModel.tables">
+  <div class="col-6">
+    <app-table [dataModel]="tbl"></app-table>
+  </div>
+</div>
+<input type="button" (click)="addTable()" value="add table">

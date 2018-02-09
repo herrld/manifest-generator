@@ -1,0 +1,7 @@
+
+<label>table: <input [(ngModel)]="dataModel.table"></label>
+<div>
+  <label>Permissions:
+    <app-string-array-editor [addLabel]="addPerTitle" [targetCollection]="dataModel.permissions"></app-string-array-editor>
+  </label>
+</div>

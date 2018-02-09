@@ -1,0 +1,6 @@
+
+<div class="row" *ngFor="let item of entities">
+  <app-string-entity [entity]="item" (updated)="updateEntry($event)"></app-string-entity>
+  <input type="button" (click)="removeItem(item.index)" value="Remove">
+</div>
+<input type="button" (click)="addItem()" [value]="addLabel">

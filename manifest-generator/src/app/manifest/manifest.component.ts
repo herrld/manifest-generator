@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
-import {Manifest} from '../models/manifest';
-import {Database} from '../models/database';
+import {Manifest} from '../models/manifest/manifest-models';
+import {DatabasesEntity} from '../models/manifest/manifest-models';
 @Component({
   selector: 'app-manifest',
   templateUrl: './manifest.component.html',
@@ -16,7 +16,7 @@ export class ManifestComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.dataModel.databases.push(new Database());
+    this.dataModel.databases.push(new DatabasesEntity());
   }
 
   gen(){
