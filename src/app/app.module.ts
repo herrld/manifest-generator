@@ -9,6 +9,7 @@ import { TableComponent } from './table/table.component';
 import { StringArrayEditorComponent } from './string-array-editor/string-array-editor.component';
 import { StringEntityComponent } from './string-array-editor/string-entity/string-entity.component';
 import { ViewsComponent } from './views/views.component';
+import { ArrayEditorModule } from './array-editor/array-editor.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { ViewsComponent } from './views/views.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    ArrayEditorModule
   ],
   providers: [],
   bootstrap: [AppComponent]
