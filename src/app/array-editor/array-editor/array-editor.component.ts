@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./array-editor.component.css']
 })
 export class ArrayEditorComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit() {
