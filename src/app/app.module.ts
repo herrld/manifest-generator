@@ -11,7 +11,6 @@ import { StringEntityComponent } from './string-array-editor/string-entity/strin
 import { ViewsComponent } from './views/views.component';
 import { ArrayEditorModule } from './array-editor/array-editor.module';
 
-
 @NgModule({
   declarations: [
     AppComponent,
